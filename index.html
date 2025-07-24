@@ -97,13 +97,13 @@
         </tr>
       </thead>
       <tbody>
-        <tr><td>Identificación</td><td>{{ identificacion }}</td><td>Registros iniciales encontrados.</td></tr>
-        <tr><td>Duplicados eliminados</td><td>{{ duplicados }}</td><td>Se eliminan registros repetidos.</td></tr>
-        <tr><td>Registros cribados</td><td>{{ registrosCribados }}</td><td>{{ identificacion }} - {{ duplicados }} = {{ registrosCribados }}.</td></tr>
-        <tr><td>Excluidos tras cribado</td><td>{{ excluidosCribado }}</td><td>No cumplen criterios básicos.</td></tr>
-        <tr><td>Reportes elegibilidad</td><td>{{ reportesElegibilidad }}</td><td>{{ registrosCribados }} - {{ excluidosCribado }} = {{ reportesElegibilidad }}.</td></tr>
-        <tr><td>Texto completo excluido</td><td>{{ excluidosTexto }}</td><td>Excluidos por revisión completa.</td></tr>
-        <tr><td>Estudios incluidos</td><td>{{ estudiosIncluidos }}</td><td>{{ reportesElegibilidad }} - {{ excluidosTexto }} = {{ estudiosIncluidos }}.</td></tr>
+        <tr><td>Identificación</td><td>{{ identificacion }}</td><td>Corresponde al total de registros encontrados en todas las fuentes de búsqueda inicial antes de cualquier filtrado o exclusión, incluyendo bases de datos y registros adicionales.</td></tr>
+        <tr><td>Duplicados eliminados</td><td>{{ duplicados }}</td><td>Representa registros repetidos detectados entre las diferentes fuentes que no aportan información nueva, por lo que se eliminan para evitar sesgos en el análisis.</td></tr>
+        <tr><td>Registros cribados</td><td>{{ registrosCribados }}</td><td>{{ identificacion }} - {{ duplicados }} = {{ registrosCribados }}. Cantidad de registros que permanecen después de eliminar duplicados. Estos se someten a una revisión inicial por título y resumen para descartar estudios irrelevantes.</td></tr>
+        <tr><td>Excluidos tras cribado</td><td>{{ excluidosCribado }}</td><td>Registros descartados en la fase de cribado porque no cumplen criterios mínimos establecidos, como población objetivo o tipo de intervención.</td></tr>
+        <tr><td>Reportes elegibilidad</td><td>{{ reportesElegibilidad }}</td><td>{{ registrosCribados }} - {{ excluidosCribado }} = {{ reportesElegibilidad }}. Documentos seleccionados para revisión completa de texto con el fin de verificar si cumplen con todos los criterios metodológicos y temáticos establecidos en el protocolo.</td></tr>
+        <tr><td>Texto completo excluido</td><td>{{ excluidosTexto }}</td><td>Estudios eliminados tras la evaluación detallada del texto completo, generalmente por incumplimiento de criterios específicos de inclusión como idioma, calidad o población estudiada.</td></tr>
+        <tr><td>Estudios incluidos</td><td>{{ estudiosIncluidos }}</td><td>{{ reportesElegibilidad }} - {{ excluidosTexto }} = {{ estudiosIncluidos }}. Total final de artículos que cumplen todos los criterios de inclusión y son considerados aptos para la síntesis cualitativa o cuantitativa en la revisión sistemática.</td></tr>
       </tbody>
     </table>
   </div>
